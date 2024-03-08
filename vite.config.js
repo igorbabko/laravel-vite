@@ -7,7 +7,10 @@ export default defineConfig({
         Inspect(),
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: true,
-        }),
+            refresh: true
+        })
     ],
+    build: {
+        outDir: 'public/dist'
+    }
 });
