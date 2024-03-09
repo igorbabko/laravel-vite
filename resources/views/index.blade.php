@@ -3,12 +3,12 @@
     <head>
         <title>Laravel / Vite</title>
 
-        @vite('resources/js/app.js')
+        {{
+            Vite::withEntryPoints(['resources/css/app.css', 'resources/js/app.js'])
+                ->useBuildDirectory('dist')
+                ->useManifestFilename('frontend.json')
+                ->createAssetPathsUsing(fn (string $path) => "http://localhost:8080/{$path}")
+        }}
     </head>
-    <body>
-        <div class="images">
-            <img src="{{ Vite::asset('resources/img/1.jpg') }}" alt="Image 1">
-            <img src="{{ Vite::asset('resources/img/2.jpg') }}" alt="Image 2">
-        </div>
-    </body>
+    <body></body>
 </html>

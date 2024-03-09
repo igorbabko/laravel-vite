@@ -6,8 +6,12 @@ export default defineConfig({
     plugins: [
         Inspect(),
         laravel({
-            input: ['resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js'],
+            buildDirectory: 'dist',
             refresh: true
         })
-    ]
+    ],
+    build: {
+        manifest: 'frontend.json'
+    }
 })
