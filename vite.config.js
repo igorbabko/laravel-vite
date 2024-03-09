@@ -7,7 +7,14 @@ export default defineConfig({
         Inspect(),
         laravel({
             input: ['resources/js/app.js'],
-            refresh: true
+            refresh: [
+                {
+                    paths: ['data/posts.json'],
+                    config: {
+                        delay: 3000
+                    }
+                }
+            ]
         })
     ]
 });
