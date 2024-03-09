@@ -9,5 +9,10 @@ export default defineConfig({
             input: ['resources/js/app.js'],
             refresh: true
         })
-    ]
+    ],
+    resolve: {
+        alias: {
+            '@': '/resources/js/components'
+        }
+    }
 });
