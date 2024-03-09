@@ -3,12 +3,9 @@
     <head>
         <title>Laravel / Vite</title>
 
-        @vite('resources/js/app.js')
+        @vite('resources/css/app.css')
     </head>
     <body>
-        <div class="images">
-            <img src="{{ Vite::asset('resources/img/1.jpg') }}" alt="Image 1">
-            <img src="{{ Vite::asset('resources/img/2.jpg') }}" alt="Image 2">
-        </div>
+        <h1>Laravel / Vite</h1>
     </body>
 </html>
