@@ -1,4 +1,4 @@
-import '../css/app.css'
-import '@/components/Title.js'
+import { createApp } from 'vue'
+import App from './components/App.vue'
 
-import.meta.glob(['../img/**'])
+createApp(App).mount('#app')

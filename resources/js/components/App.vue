@@ -1,3 +1,14 @@
+<script setup>
+import { ref } from 'vue'
+
+const title = ref('Laravel')
+</script>
+
+<template>
+    <h1 @mouseenter="title = 'Vue'" @mouseleave="title = 'Laravel'" v-text="title"/>
+</template>
+
+<style>
 body {
     background: #14111b;
     font-family: sans-serif;
@@ -25,3 +36,4 @@ h1 {
 img {
     width: 150px;
 }
+</style>
